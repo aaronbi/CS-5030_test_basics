@@ -28,9 +28,9 @@ class todoservice{
     }
 
     delete_todo(id){
-        const index = this.todos["todo"].indexOf(id);
-        if(index > -1){
-            this.todos["todos"].splice(index, 1);
+
+        if(id > -1 && id < this.todos["todos"].length){
+            this.todos["todos"].splice(id, 1);
             return True;
         }
         else{
