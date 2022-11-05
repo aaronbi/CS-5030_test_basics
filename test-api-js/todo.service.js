@@ -23,15 +23,25 @@ class todoservice{
     }
 
     add_todo(todo){
-        // Your code here
+        this.todos["todo"].push(todo);
+        return True;
     }
 
     delete_todo(id){
-        // Your code here
+        const index = this.todos["todo"].indexOf(id);
+        if(index > -1){
+            this.todos["todos"].splice(index, 1);
+            return True;
+        }
+        else{
+            return False;
+        }
+        
     }
 
     update_todo(id, todo){
-        // Your code here
+        this.todos["todos"][id] = todo;
+        return True;
     }
 }
 
