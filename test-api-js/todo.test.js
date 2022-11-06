@@ -22,14 +22,15 @@ describe('todo test suite', () => {
     
     test("add_todos", () => {
         let todo_service = new todoservice();
-        todo_service.add_todo("test element");
+        let out = todo_service.add_todo("test element");
         
         expect(todo_service.get_todos().todo.length).toEqual(4);
+	expect(out).toBe(true);
     });
     
     test("delete_todos", () => {
         let todo_service = new todoservice();
-        let out = todo_service.remove_todo(0);
+        let out = todo_service.delete_todo(0);
         expect(todo_service.get_todos().todo.length).toEqual(2);
         expect(out).toBe(true);
     });

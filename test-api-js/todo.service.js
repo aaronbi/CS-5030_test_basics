@@ -24,24 +24,24 @@ class todoservice{
 
     add_todo(todo){
         this.todos["todo"].push(todo);
-        return True;
+        return true;
     }
 
     delete_todo(id){
-
-        if(id > -1 && id < this.todos["todos"].length){
-            this.todos["todos"].splice(id, 1);
-            return True;
+	//console.log(this.todos["todos"]);
+        if(id > -1 && id < this.todos["todo"].length){
+            this.todos["todo"].splice(id, 1);
+            return true;
         }
         else{
-            return False;
+            return false;
         }
         
     }
 
     update_todo(id, todo){
-        this.todos["todos"][id] = todo;
-        return True;
+        this.todos["todo"][id] = todo;
+        return true;
     }
 }
 
